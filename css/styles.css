@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  width: 50%;
+  margin: 10px auto;
+  text-align: center;
+}
+
+h3 {
+  width: 250px;
+  height: 25px;
+  margin: auto;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+header {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.button-container, .player-container, .game-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 50px 10px;
+}
+
+button {
+  width: 100px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+#start-button {
+  background-image: url("../img/play-button.png");
+  background-size: 25%;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+#stop-button {
+  background-image: url("../img/pause-button.png");
+  background-size: 25%;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.container {
+  display: flex;
+  margin: auto;
+  margin-top: 25px;
+  width: 90%;
+  height: 125px;
+  /* border: 2px solid blue; */
+  flex-wrap: wrap;
+}
+
+.square {
+  width: 5%;
+  height: 100%;
+}
+
+.sheep {
+  background-image: url("../img/sheep.png");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.wolf {
+  background-image: url("../img/wolf.png");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+#farm {
+  background-image: url("../img/barn.png");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.counter-btn{
+  font-size: 40px;
+}
+
+#player-count {
+  font-size: 25px;
+  width: 100px;
+  height: 50px;
+  text-align: center;
+}
