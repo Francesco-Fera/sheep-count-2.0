@@ -17,14 +17,12 @@ let mySheepInterval = null
 let myWolfInterval = null
 let countDownTimer = null
 
-
-
 function moveSheep() {
-  squares.forEach(block => {
+  squares.forEach((block) => {
     block.classList.remove('sheep')
-  });
+  })
   if (sheepPositionIndex < 9) {
-      squares[sheepPositionIndex++].classList.add('sheep')
+    squares[sheepPositionIndex++].classList.add('sheep')
   } else {
     sheepPositionIndex = 0
     sheepCounter++
@@ -32,9 +30,9 @@ function moveSheep() {
 }
 
 function moveWolf() {
-  squares.forEach(block => {
+  squares.forEach((block) => {
     block.classList.remove('wolf')
-  });
+  })
   if (wolfPositionIndex > 9) {
     squares[wolfPositionIndex--].classList.add('wolf')
   } else {
@@ -53,7 +51,7 @@ function startMove() {
   resultDisplay.innerHTML = ''
   plusButton.addEventListener('click', upFunction)
   minusButton.addEventListener('click', downFunction)
-  startButton.removeEventListener("click", startMove)
+  startButton.removeEventListener('click', startMove)
 }
 
 function pause() {
@@ -62,10 +60,10 @@ function pause() {
   clearInterval(countDownTimer)
   plusButton.removeEventListener('click', upFunction)
   minusButton.removeEventListener('click', downFunction)
-  startButton.addEventListener("click", startMove)
+  startButton.addEventListener('click', startMove)
 }
-stopButton.addEventListener("click", pause)
-startButton.addEventListener("click", startMove)
+stopButton.addEventListener('click', pause)
+startButton.addEventListener('click', startMove)
 
 function countDown() {
   currentTime--
@@ -89,7 +87,7 @@ function startingParametersSetter() {
 
 function checkResult() {
   if (sheepCounter === playerCount) {
-    resultDisplay.innerHTML = 'HAI VINTO!'
+    resultDisplay.innerHTML = 'YOU WON!'
   } else {
     resultDisplay.innerHTML = 'GAME OVER :('
   }
